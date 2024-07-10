@@ -2,6 +2,7 @@ export default class Constants{
 
     constructor(envContext) {
         this.envContext = envContext;
+        console.log(this.envContext);
     }
 
     acumenApplicationTitle = this.envContext.VITE_ACUMEN_APPLICATION_TITLE;
