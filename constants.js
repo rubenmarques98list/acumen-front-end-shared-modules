@@ -9,6 +9,7 @@ export default class Constants {
         this.apiGatewayPort = this.envContext.VITE_ACUMEN_API_GATEWAY_PORT;
 
         this.loginEndpoint = this.envContext.VITE_LOGIN_ENDPOINT;
+        this.logoutEndpoint = this.envContext.VITE_LOGOUT_ENDPOINT;
         this.refreshTokenEndpoint = this.envContext.VITE_REFRESH_TOKEN_ENDPOINT
         this.logoutEndpoint = this.envContext.VITE_LOGOUT_ENDPOINT;
         this.adminServicesEndpoint = this.envContext.VITE_ADMIN_SERVICES_ENDPOINT
@@ -28,6 +29,10 @@ export default class Constants {
 
     getLoginEndpointUrl() {
         return `${this.getApiUrl()}${this.loginEndpoint}`;
+    }
+
+    getLogoutEndpointUrl() {
+        return `${this.getApiUrl()}${this.logoutEndpoint}`;
     }
 
     getRefreshTokenEndpointUrl() {
