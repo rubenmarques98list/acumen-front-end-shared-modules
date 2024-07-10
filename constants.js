@@ -2,7 +2,6 @@ export default class Constants {
 
     constructor(envContext) {
         this.envContext = envContext;
-        console.log(this.envContext);
 
         this.acumenApplicationTitle = this.envContext.VITE_ACUMEN_APPLICATION_TITLE;
         this.apiGatewayProtocol = this.envContext.VITE_ACUMEN_API_GATEWAY_PROTOCOL;
@@ -17,7 +16,7 @@ export default class Constants {
     }
 
     getApplicationTitle() {
-        return import.meta.env.VITE_ACUMEN_APPLICATION_TITLE
+        return this.envContext.VITE_ACUMEN_APPLICATION_TITLE
     }
     
     getApiUrl() {
