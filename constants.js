@@ -1,8 +1,12 @@
 export default {
-    acumenApplicationTitle: import.meta.env.VITE_ACUMEN_APPLICATION_TITLE,
+    // acumenApplicationTitle: import.meta.env.VITE_ACUMEN_APPLICATION_TITLE,
     apiGatewayProtocol: import.meta.env.VITE_ACUMEN_API_GATEWAY_PROTOCOL,
     apiGatewayHostname: window.location.hostname,
     apiGatewayPort: import.meta.env.VITE_ACUMEN_API_GATEWAY_PORT,
+
+    getApplicationTitle: function() {
+        return import.meta.env.VITE_ACUMEN_APPLICATION_TITLE
+    },
     
     getApiUrl: function() {
         return `${this.apiGatewayProtocol}://${this.apiGatewayHostname}:${this.apiGatewayPort}`;
