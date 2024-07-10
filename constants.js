@@ -13,12 +13,15 @@ export default class Constants {
         this.logoutEndpoint = this.envContext.VITE_LOGOUT_ENDPOINT;
         this.adminServicesEndpoint = this.envContext.VITE_ADMIN_SERVICES_ENDPOINT
         this.authAccessRightsRouteID = this.envContext.VITE_AUTH_ACCESS_RIGHTS_ROUTE_ID
+
+        this.authRolesRouteID = this.envContext.VITE_AUTH_ROLES_ROUTE_ID
+        this.usersRouteID = this.envContext.VITE_AUTH_USERS_ROUTE_ID
     }
 
     getApplicationTitle() {
         return this.envContext.VITE_ACUMEN_APPLICATION_TITLE
     }
-    
+
     getApiUrl() {
         return `${this.apiGatewayProtocol}://${this.apiGatewayHostname}:${this.apiGatewayPort}`
     }
@@ -31,17 +34,13 @@ export default class Constants {
         return `${this.getApiUrl()}${this.refreshTokenEndpoint}`;
     }
 
-    
-
     getLogoutEndpointURL() {
         return `${this.getApiUrl()}${this.logoutEndpoint}`;
     }
-
-    
 
     getAdminServicesEndpointUrl() {
         return `${this.getApiUrl()}${this.adminServicesEndpoint}`
     }
 
-    
+
 }
