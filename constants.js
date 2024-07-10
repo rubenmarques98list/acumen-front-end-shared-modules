@@ -1,14 +1,14 @@
 export default {
     // acumenApplicationTitle: import.meta.env.VITE_ACUMEN_APPLICATION_TITLE,
-    apiGatewayProtocol: import.meta.env.VITE_ACUMEN_API_GATEWAY_PROTOCOL,
+    /* apiGatewayProtocol: import.meta.env.VITE_ACUMEN_API_GATEWAY_PROTOCOL,
     apiGatewayHostname: window.location.hostname,
-    apiGatewayPort: import.meta.env.VITE_ACUMEN_API_GATEWAY_PORT,
+    apiGatewayPort: import.meta.env.VITE_ACUMEN_API_GATEWAY_PORT, */
 
     getApplicationTitle: function() {
         return import.meta.env.VITE_ACUMEN_APPLICATION_TITLE
     },
     
-    getApiUrl: function() {
+    /* getApiUrl: function() {
         return `${this.apiGatewayProtocol}://${this.apiGatewayHostname}:${this.apiGatewayPort}`;
     },
 
@@ -36,5 +36,5 @@ export default {
         return `${this.getApiUrl()}${this.adminServicesEndpoint}`
     },
 
-    authAccessRightsRouteID: import.meta.env.VITE_AUTH_ACCESS_RIGHTS_ROUTE_ID,
+    authAccessRightsRouteID: import.meta.env.VITE_AUTH_ACCESS_RIGHTS_ROUTE_ID, */
 }
